@@ -8,6 +8,7 @@ const Modals: React.FC = () => {
   // const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const [inventoryType, setInventoryType] = useState("in");
+  // console.log(inventoryType);
   const [bloodGroup, setBloodGroup] = useState("");
   const [quantity, setQuantity] = useState(0);
   const [email, setEmail] = useState("");
@@ -126,7 +127,7 @@ const Modals: React.FC = () => {
           </select>
           <br />
           <label htmlFor="donarEmail" className="">
-            Donar Email:
+            {inventoryType === "out" ? "Hospital Email: " : "Donar Email:"}
           </label>
           <input
             type="email"
